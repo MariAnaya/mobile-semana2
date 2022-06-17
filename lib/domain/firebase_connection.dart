@@ -17,7 +17,7 @@ Future<ResponseFirebase> getAllRegistros() async {
     try {
       DatabaseReference _registros = instanceFirebase();
       DataSnapshot response = await _registros.get();
-      print('-----------------------------');
+      print('-----------------------------');      
       print(response.value.runtimeType);
       final datos = Map<String, dynamic>.from(response.value as Map);
       final registers = ResponseFirebase.fromJson(datos.values.toList());

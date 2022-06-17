@@ -3,6 +3,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/views/listFirebase.dart';
 import 'package:flutter_application_3/views/listview_1.dart';
+import 'package:flutter_application_3/views/splash.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -17,10 +18,10 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return const  MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        home: CallFirebase()
+        home: Splash()
     );
   }
 }

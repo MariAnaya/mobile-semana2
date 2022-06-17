@@ -7,6 +7,9 @@ import '../Entities/registros.dart';
 
 
 class CallFirebase extends StatefulWidget {
+  const CallFirebase({Key? key}) : super(key: key);
+
+
   @override
   State<CallFirebase> createState() => _CallFirebaseState();
 }
@@ -52,8 +55,8 @@ class _CallFirebaseState extends State<CallFirebase> {
                 //recibe 2 parametros
                 leading: CircleAvatar(
                   // primera parte de la lista, recibe cualquier widget
-                  // backgroundImage:
-                  //     Image.network(list_registros[index].image!).image,
+                  backgroundImage:
+                      Image.network(list_registros[index].image!).image,
                 ),
                 title: Text(//segunda parte de la lista, recibe cualquier widget
                     list_registros[index].nombre!),
