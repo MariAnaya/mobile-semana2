@@ -3,6 +3,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_application_3/domain/firebase_connection.dart';
 
 import '../Entities/registros.dart';
+import 'custom_card.dart';
 
 
 
@@ -61,7 +62,7 @@ class _CallFirebaseState extends State<CallFirebase> {
                 title: Text(//segunda parte de la lista, recibe cualquier widget
                     list_registros[index].nombre!),
                 onTap: () {
-                  openAlertDialog(context, list_registros[index].nombre);
+                  Navigator.push( context, MaterialPageRoute(builder: (context)=> CustomCard(list_registros[index])));
                 });
           },
         ));
@@ -80,8 +81,8 @@ class _CallFirebaseState extends State<CallFirebase> {
 
   }
 
+
   
 
-
-
+  
 }

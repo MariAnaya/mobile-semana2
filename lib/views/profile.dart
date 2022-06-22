@@ -11,34 +11,35 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+      
+      
+      body: Card(
+       clipBehavior: Clip.antiAlias,
+       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+       color: Color.fromARGB(160, 155, 180, 231),
+       
+       child: Column(
+         children: <Widget>[
+           Image.asset('assets/images/mauro.png'),
+           Container(
+             padding: EdgeInsets.all(100),
+             child: Container(
+              child: Column(
+            
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircleAvatar(
-                backgroundImage:
-                    AssetImage('assets/images/maria-anaya.png'),
-                radius: 130),
-            const Text(
-              "\n Name: Maria Anaya",
-              style: TextStyle(fontSize: 20),
-            ),
-            const Text(
-              "Username: marianaya01",
-              style: TextStyle(fontSize: 20),
-            ),
-            const Text(
-              "Cel: 3182302865",
-              style: TextStyle(fontSize: 20),
-            ),
-            const Text(
-              "Email: manaya@lsv-tech.com",
-              style: TextStyle(fontSize: 20),
-            ),
-          ],
-        ),
-      ),
-    );
+          
+          children: const [
+            Center(child: Text("Mauricio Arias")),
+            Center(child: Text("Software Developer")), 
+            Center(child: Text("marias@lsv-tech.com")),
+            Center(child: Text("3205438789")),
+            ],
+        ),  
+             ),
+           )
+         ],
+       )));
+
+    
   }
 }

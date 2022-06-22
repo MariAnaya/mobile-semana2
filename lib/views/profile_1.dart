@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'formulario.dart';
 import 'listFirebase.dart';
 
 class ProfilePage1 extends StatelessWidget {
@@ -30,7 +31,7 @@ class ProfilePage1 extends StatelessWidget {
                     children: [
                       FloatingActionButton.extended(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> CallFirebase()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Formulario()));
                         },
                         heroTag: 'follow',
                         elevation: 0,
