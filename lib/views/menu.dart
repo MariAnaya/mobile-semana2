@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 import 'listFirebase.dart';
+import 'profile.dart';
+import 'profile_1.dart';
 
 class Menu extends StatefulWidget{
 
@@ -18,17 +20,9 @@ int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-      
-    ),
-  
+   ProfilePage1(),  
    CallFirebase(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+   Profile(),
   
   ];
 
